@@ -1,0 +1,215 @@
+:root {
+  --white-text: rgba(255, 255, 255, 1);
+
+  --blue-text: rgba(33, 150, 243, 1);
+
+  --black-text: rgba(33, 33, 33, 1);
+
+  --grey-text: rgba(117, 117, 117, 1);
+
+  --grey-text-op60: rgba(255, 255, 255, 0.6);
+
+  --back-grey: rgba(47, 48, 58, 1);
+
+  --back-white-gray: rgba(245, 244, 250, 1);
+
+  --back-potfolio-img: rgba(238, 238, 238, 1);
+}
+
+.body {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  background-color: var(--white-text);
+}
+
+.header-nav a {
+  color: var(--black-text);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.header-nav .link:hover,
+.header-nav .link:focus {
+  color: var(--blue-text);
+  background: var(--white-text);
+}
+
+.header-nav .link.current {
+  color: var(--blue-text);
+}
+
+.adress-header a {
+  font-style: normal;
+  color: var(--grey-text);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.adress-header .link:hover,
+.adress-header .link:focus {
+  color: var(--blue-text);
+  background: var(--white-text);
+}
+
+.title-webstudio {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  color: var(--blue-text);
+}
+
+.web-black {
+  color: var(--black-text);
+}
+
+.web-white {
+  color: var(--white-text);
+}
+
+.section-top {
+  background-color: var(--back-grey);
+}
+
+.title-top {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white-text);
+}
+
+.button {
+  border: none;
+  background-color: var(--blue-text);
+  color: var(--white-text);
+  font-weight: 700;
+}
+
+.section-directions {
+  background-color: var(--white-text);
+}
+
+.advantages {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--black-text);
+}
+
+.description-advantages {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--grey-text);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.our-team {
+  background-color: var(--back-white-gray);
+}
+
+.section-advantages {
+  background-color: var(--white-text);
+}
+
+.specialists {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--black-text);
+}
+
+.profession {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--grey-text);
+}
+
+.footer {
+  background-color: var(--back-grey);
+  color: var(--white-text);
+}
+
+.footer-adress {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--white-text);
+}
+
+.footer-mail-tel {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--grey-text-op60);
+}
+
+.nav-portfolio button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--black-text);
+  background-color: var(--back-white-gray);
+}
+
+.nav-portfolio .link:hover,
+.nav-portfolio .link:focus {
+  color: var(--white-text);
+  background: var(--blue-text);
+}
+
+.projects-portfolio {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  color: var(--black-text);
+  background-color: var(--back-white-gray);
+}
+
+.portfolio-categories {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: var(--grey-text);
+  background-color: var(--back-white-gray);
+}
