@@ -16,8 +16,32 @@
   --back-potfolio-img: rgba(238, 238, 238, 1);
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: center;
+  text-align: center;
+}
+
 .body {
   font-family: 'Roboto', sans-serif;
+}
+
+img {
+  display: inline-block;
 }
 
 a {
@@ -30,47 +54,37 @@ ul {
 
 .header {
   background-color: var(--white-text);
+  border-bottom: solid 1px #ececec;
 }
 
-.header-nav a {
-  color: var(--black-text);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
+.header,
+.header-nav-links,
+.logo,
+.social-links,
+.adress-header,
+.adress-header a,
+.advantages,
+.direct-list,
+.section-directions li,
+.our-team-list,
+.footer .logo-footer,
+.nav-portfolio {
+  display: flex;
 }
 
-.header-nav .link:hover,
-.header-nav .link:focus {
-  color: var(--blue-text);
-  background: var(--white-text);
+.header-nav-links {
+  align-items: baseline;
 }
 
-.header-nav .link.current {
-  color: var(--blue-text);
-}
-
-.adress-header a {
-  font-style: normal;
-  color: var(--grey-text);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-}
-
-.adress-header .link:hover,
-.adress-header .link:focus {
-  color: var(--blue-text);
-  background: var(--white-text);
-}
-
-.title-webstudio {
+.logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 31px;
   color: var(--blue-text);
+  padding-top: 25px;
+  padding-bottom: 24px;
+  margin-right: 93px;
 }
 
 .web-black {
@@ -81,11 +95,76 @@ ul {
   color: var(--white-text);
 }
 
+.social-links {
+  padding: 0;
+  align-items: baseline;
+}
+
+.social-links .link {
+  color: var(--black-text);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.social-links .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.social-links .link:hover,
+.social-links .link:focus {
+  color: var(--blue-text);
+  background: var(--white-text);
+}
+
+.social-links .current {
+  color: var(--blue-text);
+}
+
+.adress-header {
+  margin: 0;
+  padding: 0;
+}
+
+.adress-header a {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  color: var(--grey-text);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.adress-header .link:hover,
+.adress-header .link:focus {
+  color: var(--blue-text);
+  background: var(--white-text);
+}
+
+.adress-header .mail {
+  margin-left: 331px;
+  margin-right: 50px;
+}
+
 .section-top {
   background-color: var(--back-grey);
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .title-top {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 60px;
@@ -93,21 +172,36 @@ ul {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text);
+  width: 696px;
 }
 
 .button {
+  display: inline-block;
   border: none;
   background-color: var(--blue-text);
   color: var(--white-text);
   font-weight: 700;
-}
-
-.section-directions {
-  background-color: var(--white-text);
+  font-size: 16px;
+  line-height: 30px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+  text-align: center;
 }
 
 .advantages {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0px;
   font-weight: 700;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  text-align: left;
+}
+
+.advantages h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
@@ -116,6 +210,8 @@ ul {
 }
 
 .description-advantages {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -123,7 +219,22 @@ ul {
   color: var(--grey-text);
 }
 
-.title {
+.advantages .item {
+  width: 270px;
+}
+
+.advantages .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.section-directions {
+  padding-top: 0px;
+  padding-bottom: 94px;
+}
+
+.title-section-directions {
+  margin-top: 0;
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
@@ -131,44 +242,97 @@ ul {
   letter-spacing: 0.03em;
 }
 
-.our-team {
-  background-color: var(--back-white-gray);
+.direct-list {
+  padding: 0;
 }
 
-.section-advantages {
-  background-color: var(--white-text);
+.direct-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.our-team {
+  background-color: var(--back-white-gray);
+  padding-top: 96px;
+  padding-bottom: 94px;
+}
+
+.title-our-team {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.our-team-list {
+  padding: 0;
+}
+
+.our-team-list img {
+  margin-bottom: 30px;
+}
+
+.our-team-list .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .specialists {
+  margin-top: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black-text);
+  margin-bottom: 10px;
 }
 
 .profession {
+  margin-top: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--grey-text);
+  margin-bottom: 30px;
 }
 
 .footer {
   background-color: var(--back-grey);
   color: var(--white-text);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo-footer {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  color: var(--blue-text);
+  margin-bottom: 20px;
 }
 
 .footer-adress {
+  margin: 0;
+  padding: 0;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   color: var(--white-text);
+  text-align: left;
+  margin-bottom: 9px;
+}
+
+.footer-adress-list {
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 .footer-mail-tel {
@@ -180,6 +344,18 @@ ul {
   color: var(--grey-text-op60);
 }
 
+.footer-adress-list .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.nav-portfolio {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  padding-top: 94px;
+}
+
 .nav-portfolio button {
   font-weight: 500;
   font-size: 16px;
@@ -187,7 +363,15 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black-text);
-  background-color: var(--back-white-gray);
+  background-color: var(--white-text);
+  border-radius: 4px;
+  border-color: transparent;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.nav-portfolio .btn:not(:last-child) {
+  margin-right: 6px;
 }
 
 .nav-portfolio .link:hover,
@@ -196,20 +380,68 @@ ul {
   background: var(--blue-text);
 }
 
+.nav-portfolio .current {
+  background-color: var(--blue-text);
+  color: var(--white-text);
+}
+
+.project {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 94px;
+  margin-top: 34px;
+}
+
+.project img {
+  margin-bottom: 20px;
+}
+
+.project .item {
+  margin: 0;
+  padding: 26;
+  display: inline-block;
+  margin-left: -5px;
+  margin-right: -5px;
+  border: solid 1px #eeeeee;
+}
+
 .projects-portfolio {
+  margin: 0;
+  padding: 0;
+  width: 322px;
   font-weight: 700;
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0.06em;
   color: var(--black-text);
-  background-color: var(--back-white-gray);
+  background-color: var(--white-text);
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4px;
 }
 
 .portfolio-categories {
+  margin: 0;
+  padding: 0;
+  width: 322px;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.03em;
   color: var(--grey-text);
-  background-color: var(--back-white-gray);
+  background-color: var(--white-text);
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.project .item:nth-child(3n + 2) {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.project .item:nth-child(-n + 6) {
+  margin-bottom: 30px;
 }
