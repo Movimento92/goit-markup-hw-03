@@ -52,23 +52,34 @@ ul {
   list-style: none;
 }
 
-.header {
-  background-color: var(--white-text);
-  border-bottom: solid 1px #ececec;
-}
-
 .header,
-.header-nav-links,
 .logo,
-.social-links,
 .adress-header,
-.adress-header a,
+.header-nav-links,
+.container-header .header-nav-links,
+.social-links,
 .advantages,
 .direct-list,
 .section-directions li,
 .our-team-list,
 .footer .logo-footer,
 .nav-portfolio {
+  display: flex;
+}
+
+.header {
+  background-color: var(--white-text);
+  border-bottom: solid 1px #ececec;
+  align-items: baseline;
+}
+
+.container-header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: baseline;
   display: flex;
 }
 
@@ -96,6 +107,7 @@ ul {
 }
 
 .social-links {
+  margin: 0;
   padding: 0;
   align-items: baseline;
 }
@@ -108,6 +120,10 @@ ul {
   letter-spacing: 0.02em;
   padding-top: 28px;
   padding-bottom: 28px;
+}
+
+.social-links .item {
+  align-items: baseline;
 }
 
 .social-links .item:not(:last-child) {
@@ -127,6 +143,7 @@ ul {
 .adress-header {
   margin: 0;
   padding: 0;
+  align-items: baseline;
 }
 
 .adress-header a {
@@ -140,6 +157,7 @@ ul {
   letter-spacing: 0.02em;
   padding-top: 28px;
   padding-bottom: 28px;
+  align-items: baseline;
 }
 
 .adress-header .link:hover,
@@ -148,6 +166,8 @@ ul {
   background: var(--white-text);
 }
 
+/*изменение 331px на авто перестало работать после того как убрал адресс из тега nav, 
+не смог исправить, отсавил 331px , буду рад если подскажите решение .  */
 .adress-header .mail {
   margin-left: 331px;
   margin-right: 50px;
@@ -162,7 +182,7 @@ ul {
 
 .title-top {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   margin-right: auto;
   margin-left: auto;
   font-weight: 900;
@@ -189,13 +209,16 @@ ul {
   text-align: center;
 }
 
+.section-advantarges {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .advantages {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0px;
   font-weight: 700;
-  padding-top: 94px;
-  padding-bottom: 94px;
   text-align: left;
 }
 
@@ -244,6 +267,7 @@ ul {
 
 .direct-list {
   padding: 0;
+  margin-top: 0;
 }
 
 .direct-list .item:not(:last-child) {
@@ -268,14 +292,27 @@ ul {
 
 .our-team-list {
   padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.our-team-list img {
-  margin-bottom: 30px;
+.our-team-list li {
+  width: 270px;
+}
+
+.our-team-list .item {
+  background-color: var(--white-text);
 }
 
 .our-team-list .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.spec-pro {
+  padding-right: auto;
+  padding-left: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .specialists {
@@ -291,13 +328,13 @@ ul {
 
 .profession {
   margin-top: 0;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--grey-text);
-  margin-bottom: 30px;
 }
 
 .footer {
@@ -348,12 +385,16 @@ ul {
   margin-bottom: 9px;
 }
 
+.section-nav {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .nav-portfolio {
   margin: 0;
   padding: 0;
   text-align: center;
   justify-content: center;
-  padding-top: 94px;
 }
 
 .nav-portfolio button {
@@ -388,20 +429,15 @@ ul {
 .project {
   margin: 0;
   padding: 0;
-  padding-bottom: 94px;
-  margin-top: 34px;
-}
-
-.project img {
-  margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .project .item {
   margin: 0;
-  padding: 26;
   display: inline-block;
   margin-left: -5px;
   margin-right: -5px;
+  width: 370px;
   border: solid 1px #eeeeee;
 }
 
@@ -434,7 +470,14 @@ ul {
   text-align: left;
   margin-right: auto;
   margin-left: auto;
+}
+
+.pro-cat {
+  width: 322px;
   margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .project .item:nth-child(3n + 2) {
