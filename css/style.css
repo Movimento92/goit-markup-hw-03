@@ -41,7 +41,7 @@ html {
 }
 
 img {
-  display: inline-block;
+  display: block;
 }
 
 a {
@@ -82,8 +82,6 @@ ul {
   align-items: baseline;
   display: flex;
 }
-
-
 
 .header-nav-links {
   align-items: baseline;
@@ -146,7 +144,6 @@ ul {
   margin: 0;
   padding: 0;
   align-items: baseline;
- 
 }
 
 .adress-header a {
@@ -163,21 +160,24 @@ ul {
   align-items: baseline;
 }
 
-
-
 .adress-header .link:hover,
 .adress-header .link:focus {
   color: var(--blue-text);
   background: var(--white-text);
 }
 
-/*изменение 331px на авто перестало работать после того как убрал адресс из тега nav, 
-не смог исправить, отсавил 331px , буду рад если подскажите решение .  */
+.adress-style {
+  margin-left: auto;
+}
+
 .adress-header .mail {
   margin-left: auto;
   margin-right: 50px;
 }
 
+.adress-style {
+  margin-left: auto;
+}
 
 .section-top {
   background-color: var(--back-grey);
@@ -317,7 +317,7 @@ ul {
 
 .spec-pro {
   padding-right: 20px;
-  padding-left: 20px
+  padding-left: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -426,21 +426,20 @@ ul {
 .nav-portfolio .link:focus {
   color: var(--white-text);
   background: var(--blue-text);
+  outline: none;
 }
-
 
 .project {
   margin: 0;
   padding: 0;
   margin-top: 50px;
-   display: flex;
+  display: flex;
   flex-wrap: wrap;
 }
 
 .project .item {
   margin: 0;
   width: 370px;
-  
 }
 
 .projects-portfolio {
@@ -481,7 +480,6 @@ ul {
   padding-right: 24px;
   border: solid 1px #eeeeee;
   box-sizing: border-box;
-  
 }
 
 .project .item:nth-child(3n + 2) {
