@@ -83,6 +83,8 @@ ul {
   display: flex;
 }
 
+
+
 .header-nav-links {
   align-items: baseline;
 }
@@ -144,6 +146,7 @@ ul {
   margin: 0;
   padding: 0;
   align-items: baseline;
+ 
 }
 
 .adress-header a {
@@ -160,6 +163,8 @@ ul {
   align-items: baseline;
 }
 
+
+
 .adress-header .link:hover,
 .adress-header .link:focus {
   color: var(--blue-text);
@@ -169,9 +174,10 @@ ul {
 /*изменение 331px на авто перестало работать после того как убрал адресс из тега nav, 
 не смог исправить, отсавил 331px , буду рад если подскажите решение .  */
 .adress-header .mail {
-  margin-left: 331px;
+  margin-left: auto;
   margin-right: 50px;
 }
+
 
 .section-top {
   background-color: var(--back-grey);
@@ -268,6 +274,7 @@ ul {
 .direct-list {
   padding: 0;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .direct-list .item:not(:last-child) {
@@ -309,8 +316,8 @@ ul {
 }
 
 .spec-pro {
-  padding-right: auto;
-  padding-left: auto;
+  padding-right: 20px;
+  padding-left: 20px
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -404,7 +411,7 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--black-text);
-  background-color: var(--white-text);
+  background-color: var(--back-white-gray);
   border-radius: 4px;
   border-color: transparent;
   padding-left: 22px;
@@ -421,24 +428,19 @@ ul {
   background: var(--blue-text);
 }
 
-.nav-portfolio .current {
-  background-color: var(--blue-text);
-  color: var(--white-text);
-}
 
 .project {
   margin: 0;
   padding: 0;
   margin-top: 50px;
+   display: flex;
+  flex-wrap: wrap;
 }
 
 .project .item {
   margin: 0;
-  display: inline-block;
-  margin-left: -5px;
-  margin-right: -5px;
   width: 370px;
-  border: solid 1px #eeeeee;
+  
 }
 
 .projects-portfolio {
@@ -453,7 +455,7 @@ ul {
   background-color: var(--white-text);
   text-align: left;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 0;
   margin-bottom: 4px;
 }
 
@@ -468,16 +470,18 @@ ul {
   color: var(--grey-text);
   background-color: var(--white-text);
   text-align: left;
-  margin-right: auto;
+  margin-right: 0;
   margin-left: auto;
 }
 
 .pro-cat {
-  width: 322px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 24px;
-  margin-right: 24px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border: solid 1px #eeeeee;
+  box-sizing: border-box;
+  
 }
 
 .project .item:nth-child(3n + 2) {
